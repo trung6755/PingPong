@@ -14,8 +14,17 @@ public class Ball : MonoBehaviour
 
     private void Start()
     {
+        GameManager.Instance.GameStateChanged += GameManager_GameStateChanged;
         ResetPos();
         AddStartingForce();
+    }
+
+    private void GameManager_GameStateChanged(GameState obj)
+    {//
+        if (obj == GameState.GameOver)
+        {
+        Destroy(gameObject);
+        }
     }
 
     public void ResetPos()

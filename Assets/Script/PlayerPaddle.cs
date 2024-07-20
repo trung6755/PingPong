@@ -8,6 +8,9 @@ public class PlayerPaddle : Paddle
 
     private void Update()
     {
+        if (GameManager.Instance.GameState == GameState.Playing)
+        {
+
         if (Input.GetKey(KeyCode.W))
         {
             _direction = Vector2.up;
@@ -19,6 +22,7 @@ public class PlayerPaddle : Paddle
         else
         {
             _direction = Vector2.zero;
+        }
         }
     }
 
