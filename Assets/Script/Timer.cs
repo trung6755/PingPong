@@ -7,7 +7,12 @@ using System;
 
 public class Timer : MonoBehaviour
 {
+    
     private TMP_Text _timerText;
+    public int playerScore;
+    public int oppScore;
+    public GameObject playerWin;
+    public GameObject playerLose;
     enum TimerType { Countdown}
     [SerializeField] private TimerType _timerType;
     [SerializeField] private float timeToDisplay = 180.0f;
@@ -47,13 +52,9 @@ public class Timer : MonoBehaviour
 
         TimeSpan timeSpan = TimeSpan.FromSeconds(timeToDisplay);
         _timerText.text = timeSpan.ToString(format:@"mm\:ss");
-
         
     }
 
-    public void TimeUp()
-    {
-
-    }
+    
 
 }

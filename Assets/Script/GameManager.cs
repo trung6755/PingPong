@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 {
     public Ball ball;
     public Paddle player;
-    public Paddle opp;
+    public Paddle opp;    
     private int _playerScore;
     private int _oppScore;
 
@@ -42,7 +42,4 @@ public class GameManager : MonoBehaviour
         this.player.ResetPosition();
         this.opp.ResetPosition();
     }
-
-    
-    
 }
